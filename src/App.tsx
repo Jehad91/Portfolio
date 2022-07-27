@@ -1,55 +1,49 @@
-import React, { useCallback } from "react";
-import Particles from "react-tsparticles";
-import type { Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
-import './App.css';
-import particlesOptions from "./particles.json";
-import { ISourceOptions } from "tsparticles-engine";
+import React from "react";
 import ReactFullpage from '@fullpage/react-fullpage';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Skills from './Pages/Skills';
+import Contact from './Pages/Contact';
+import Works from './Pages/Works';
+import './App.css';
 
-function App() {
-    const particlesInit = useCallback(async (engine: Engine) => {
-        await loadFull(engine);
-    }, []);
-
-    return (
-      <div className="App">
-        <Particles options={particlesOptions as ISourceOptions} init={particlesInit}/>
-        <ReactFullpage
-          licenseKey = {'YOUR_KEY_HERE'}
-          scrollingSpeed = {1000}
-          sectionsColor = {['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']}
-          navigation = {true}
-          navigationPosition = {'right'}
-          navigationTooltips = {['Home', 'About Me', 'Skills', 'Contact']}
-          showActiveTooltip = {true}
-          slidesNavigation = {true}
-          slidesNavPosition = {'bottom'}
-          lazyLoading = {true}
-          fixedElements = {'#header, .footer'} 
-        
-          render={() => {
-            return (
-              <ReactFullpage.Wrapper>
-                <div id="header">Header</div>
-                <div className="section">
-                <p>Home Page</p>
-                </div>
-                <div className="section">
-                <p>About Me</p>
-                </div>
-                <div className="section">
-                  <p>Skills</p>
-                </div>
-                <div className="section">
-                  <p>Contact</p>
-                </div>
-              </ReactFullpage.Wrapper>
-            );
-          }}
-        />
-        </div>
-    );
+const App = () => {
+  return (
+      <ReactFullpage
+        licenseKey = {'YOUR_KEY_HERE'}
+        scrollingSpeed = {1000}
+        // sectionsColor = {['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']}
+        navigation = {true}
+        navigationPosition = {'right'}
+        navigationTooltips = {['Home', 'About Me', 'Skills', 'Contact']}
+        showActiveTooltip = {true}
+        slidesNavigation = {true}
+        slidesNavPosition = {'bottom'}
+        lazyLoading = {true}
+      
+        render={() => {
+          return (
+            <ReactFullpage.Wrapper>
+              <div className="section">
+                <Home />
+              </div>
+              <div className="section">
+                <About />
+              </div>
+              <div className="section">
+                <Skills />
+              </div>
+              <div className="section">
+                <Works />
+              </div>
+              <div className="section">
+                <Contact />
+              </div>
+            </ReactFullpage.Wrapper>
+          );
+        }}
+      />
+  );
 }
 
 export default App;
