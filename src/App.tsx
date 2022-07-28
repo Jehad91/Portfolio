@@ -16,13 +16,14 @@ import './App.css';
 
 const App = () => {
   const [page, setPage] = useState<String | Number>('');
+
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
-  console.log(page)
+
   return (
     <>
-      <Particles options={page === 'about' ? particlesOptionsLight as ISourceOptions : particlesOptionsDark as ISourceOptions} init={particlesInit} />
+      <Particles options={page === 'about' ? particlesOptionsDark as ISourceOptions : particlesOptionsLight as ISourceOptions} init={particlesInit} />
       <ReactFullpage
         licenseKey = {'YOUR_KEY_HERE'}
         scrollingSpeed = {1000}
@@ -30,18 +31,16 @@ const App = () => {
         // sectionsColor = {['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']}
         navigation = {true}
         navigationPosition = {'right'}
-        navigationTooltips = {['Home', 'About Me', 'Skills', 'Contact']}
+        navigationTooltips = {['Home', 'About', 'Skills', 'Contact']}
         showActiveTooltip = {true}
         slidesNavigation = {true}
         slidesNavPosition = {'bottom'}
         lazyLoading = {true}
         afterLoad= {function(origin:Item, destination:Item, direction:string){
-          console.log(destination);
           setPage(destination.anchor);
         }}
         
         render={() => {
-          
           return (
             <ReactFullpage.Wrapper>
               <div className="section">
