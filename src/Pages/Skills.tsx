@@ -1,10 +1,12 @@
 import React from 'react';
+import Header from '../Components/Heading';
+
 
 const Skills = () => {
 
   return (
     <>
-      <h1>Skills</h1>
+      <Header title="Skills" />
     </>
   )
 }
