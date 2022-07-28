@@ -6,6 +6,3 @@
   padding: 0;
   z-index: -1;
 }
-#tsparticles > canvas{
-  transform: translateY(100%);
-}

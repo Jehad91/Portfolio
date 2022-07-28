@@ -1,4 +1,9 @@
-{
+{  
+"background": {
+  "color": {
+    "value": "#fff"
+  }
+},
   "particles": {
     "number": {
       "value": 80,
