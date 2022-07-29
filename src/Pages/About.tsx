@@ -25,7 +25,7 @@ const About = () => {
           top: "50%",
           transform: "translateY(-50%)",
           left: "100px",
-          borderRadius: "5px",
+          borderRadius: "7px",
         }
       }
       {...props}
@@ -34,7 +34,7 @@ const About = () => {
 
   return (
     <>
-      <Header title="About" />
+      <Header title="About" colour="#d5d5d51c" top="43px" left="70px" />
       <AboutBox>
         <ParagraphStyle>
           I'm a Full-Stack Web developer located in Palestine.
