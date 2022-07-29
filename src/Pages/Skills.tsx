@@ -20,7 +20,7 @@ const Skills = () => {
 
   return (
     <>
-      <Header title="Skills" colour="#0000001a" bottom="0" right="20%"/>
+      <Header title="Skills" colour="#0000001a" bottom="16px" right="20%"/>
       <Box
         direction="row"
         align="center"
@@ -30,10 +30,10 @@ const Skills = () => {
         style={
           {
             gap:"10px",
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
+            // position: "absolute",
+            // top: "50%",
+            // left: "50%",
+            // transform: "translate(-50%, -50%)",
           }
         }
       >

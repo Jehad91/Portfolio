@@ -1,0 +1,30 @@
+[
+  {
+    "title": "CleanStead",
+    "github": "https://github.com/GSG-G11/CleanStead/",
+    "deploy": "https://cleanstead.herokuapp.com/",
+    "description": "A full stack final project responsive website created using create-react-app",
+    "techlist": ["JavaScript", "TypeScript", "Node.js", "React Hooks", "Express", "PostgreSQL", "HTML5", "CSS3", "Heroku", "Socket.io", "Char.js", "leaflet map"]
+  },
+  {
+    "title": "Fresh Pet",
+    "github": "https://github.com/GSG-G11/fresh-pet/",
+    "deploy": "https://fresh-pet.herokuapp.com/",
+    "description": "A full stack, ecommerce responsive website created using create-react-app",
+    "techlist": ["JavaScript", "Node.js", "React", "Express", "PostgreSQL", "HTML5", "CSS3", "Heroku"]
+  },
+  {
+    "title": "Reddit Clone",
+    "github": "https://github.com/GSG-G11/Jehad-Reddit/",
+    "deploy": "https://jehad-reddit.herokuapp.com/",
+    "description": "A full stack final project responsive website created using create-react-app",
+    "techlist": ["JavaScript", "TypeScript", "Node.js", "React Hooks", "Express", "PostgreSQL", "HTML5", "CSS3", "Heroku", "Socket.io", "Char.js", "leaflet map"]
+  },
+  {
+    "title": "CleanStead",
+    "github": "https://github.com/GSG-G11/CleanStead/",
+    "deploy": "https://cleanstead.herokuapp.com/",
+    "description": "A full stack, reddit clone responsive website ",
+    "techlist": ["JavaScript", "Node.js", "Express", "PostgreSQL", "HTML5", "CSS3", "Heroku", "Rest API", "JWT Authentication", "Validation"]
+  }
+]

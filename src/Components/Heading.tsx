@@ -15,7 +15,6 @@ const Header = (props: HeaderProps) => {
       fontSize: '100px',
       fontWeight: '900',
       margin: '0',
-      padding: '30px',
       color: props.colour,
       position: 'absolute',
       top: props.top,

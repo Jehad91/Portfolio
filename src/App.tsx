@@ -28,10 +28,10 @@ const App = () => {
         licenseKey = {'YOUR_KEY_HERE'}
         scrollingSpeed = {1000}
         anchors= {['home', 'about', 'skills', 'works', 'contact']}
-        // sectionsColor = {['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']}
+        sectionsColor = {['transparent', 'transparent', 'transparent', '#000']}
         navigation = {true}
         navigationPosition = {'right'}
-        navigationTooltips = {['Home', 'About', 'Skills', 'Contact']}
+        navigationTooltips = {['Home', 'About', 'Skills', 'Works', 'Contact']}
         showActiveTooltip = {true}
         slidesNavigation = {true}
         slidesNavPosition = {'bottom'}
@@ -49,10 +49,10 @@ const App = () => {
               <div className="section">
                 <About />
               </div>
-              <div className="section">
+              <div className="section skill-section">
                 <Skills />
               </div>
-              <div className="section">
+              <div className="section" style={{overflow: "scroll"}}>
                 <Works />
               </div>
               <div className="section">
