@@ -17,3 +17,9 @@
 p{
   white-space: break-spaces;
 }
+.box-icon:hover{
+  background-color: #222;
+}
+.box-icon:hover span{
+  color: white;
+}

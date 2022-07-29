@@ -1,17 +1,28 @@
 import React from 'react';
 import { Heading } from 'grommet';
 
-const Header = (props: { title: String}) => {
+interface HeaderProps{
+  title: string;
+  colour: string;
+  top?: string;
+  left?: string;
+  bottom?: string;
+  right?: string;
+}
+const Header = (props: HeaderProps) => {
   return (
     <Heading style={{
       fontSize: '100px',
       fontWeight: '900',
       margin: '0',
       padding: '30px',
-      color: '#d5d5d51c',
+      color: props.colour,
       position: 'absolute',
-      top: '43px',
-      left: '70px'
+      top: props.top,
+      left: props.left,
+      right: props.right,
+      bottom: props.bottom,
+      zIndex: '-1'
     }}>
       {props.title.toUpperCase()}
     </Heading>
