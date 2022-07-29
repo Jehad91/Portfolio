@@ -1,3 +1,29 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* scrollbar Style */
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ccc;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
 #tsparticles {
   position: fixed;
   height: 100%;
@@ -19,7 +45,17 @@ p{
 }
 .box-icon:hover{
   background-color: #222;
+  transform: scale(1.05);
 }
-.box-icon:hover span{
+.box-icon:hover span,
+.box-icon:hover p,
+.box-icon:hover h4,
+.box-icon:hover svg{
   color: white;
+  fill: white;
+}
+.skill-section{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
