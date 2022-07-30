@@ -20,7 +20,7 @@ const Skills = () => {
 
   return (
     <>
-      <Header title="Skills" colour="#0000001a" bottom="16px" right="20%"/>
+      <Header title="Skills" colour="#0000001a" bottom="38px" right="20%"/>
       <Box
         direction="row"
         align="center"

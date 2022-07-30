@@ -9,7 +9,7 @@ const BoxWorkStyle = (props: JSX.IntrinsicAttributes & BoxExtendedProps & { chil
     width='20rem'
     height='50vh'
     background='#fcf6f4'
-    pad='10px'
+    pad='10px 20px'
     style={{
       marginRight: '40px',
       borderRadius: '0px 40px',
