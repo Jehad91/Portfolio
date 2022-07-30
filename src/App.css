@@ -49,7 +49,7 @@ p{
 }
 .box-icon:hover span,
 .box-icon:hover p,
-.box-icon:hover h4,
+.box-icon:hover h3,
 .box-icon:hover svg{
   color: white;
   fill: white;
@@ -58,4 +58,7 @@ p{
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+}
+.fp-watermark{
+  display: none;
 }

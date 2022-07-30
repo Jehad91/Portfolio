@@ -1,18 +1,19 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, Suspense, lazy } from 'react';
 import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import particlesOptionsDark from "./Config/particles-dark.json";
 import particlesOptionsLight from "./Config/particles-light.json";
+import particlesOptionsAmoung from "./Config/particles-amoung.json";
 import { ISourceOptions } from "tsparticles-engine";
 import ReactFullpage, { Item } from '@fullpage/react-fullpage';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Skills from './Pages/Skills';
-import Contact from './Pages/Contact';
-import Works from './Pages/Works';
+import Loading from './Components/Loading';
 import './App.css';
-
+const Home = lazy(() => import('./Pages/Home'));
+const About = lazy(() => import('./Pages/About'));
+const Skills = lazy(() => import('./Pages/Skills'));
+const Works = lazy(() => import('./Pages/Works'));
+const Contact = lazy(() => import('./Pages/Contact'));
 
 const App = () => {
   const [page, setPage] = useState<String | Number>('');
@@ -23,12 +24,16 @@ const App = () => {
 
   return (
     <>
-      <Particles options={page === 'about' ? particlesOptionsDark as ISourceOptions : particlesOptionsLight as ISourceOptions} init={particlesInit} />
+      <Particles options={
+        ((page === 'about') && particlesOptionsDark as ISourceOptions) ||
+        ((page === 'skills') && particlesOptionsLight as ISourceOptions) ||
+        ((page === 'works') && particlesOptionsAmoung as ISourceOptions) ||
+        particlesOptionsDark as ISourceOptions} init={particlesInit}
+      />
       <ReactFullpage
         licenseKey = {'YOUR_KEY_HERE'}
         scrollingSpeed = {1000}
         anchors= {['home', 'about', 'skills', 'works', 'contact']}
-        sectionsColor = {['transparent', 'transparent', 'transparent', '#000']}
         navigation = {true}
         navigationPosition = {'right'}
         navigationTooltips = {['Home', 'About', 'Skills', 'Works', 'Contact']}
@@ -44,19 +49,29 @@ const App = () => {
           return (
             <ReactFullpage.Wrapper>
               <div className="section">
-                <Home />
+                <Suspense fallback={<Loading/>}>
+                  <Home />
+                </Suspense>
               </div>
               <div className="section">
-                <About />
+                <Suspense fallback={<Loading/>}>
+                  <About />
+                </Suspense>
               </div>
               <div className="section skill-section">
-                <Skills />
+                <Suspense fallback={<Loading/>}>
+                  <Skills />
+                </Suspense>
               </div>
               <div className="section" style={{overflow: "scroll"}}>
-                <Works />
+                <Suspense fallback={<Loading/>}>
+                  <Works />
+                </Suspense>
               </div>
               <div className="section">
-                <Contact />
+                <Suspense fallback={<Loading/>}>
+                  <Contact />
+                </Suspense>
               </div>
             </ReactFullpage.Wrapper>
           );

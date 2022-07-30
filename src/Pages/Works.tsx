@@ -8,32 +8,27 @@ import worksData from '../Data/works.json';
 const Works = () => {
   return (
     <>
-      <Header title="Works" colour="#0000001a" top="40px" right="20%"/>
+      <Header title="Works" colour="#ffffff26" top="40px" right="20%"/>
       <Box
         margin="30px"
         direction="row"
         align="center"
         justify="center"
-        style={
-          {
-            display: "-webkit-inline-box"
-            // gap:"10px",
-            // position: "absolute",
-            // top: "50%",
-            // left: "50%",
-            // transform: "translate(-50%, -50%)",
-          }
-        }
+        style={{display: "-webkit-inline-box"}}
       >
         {worksData.map(({title, github, deploy, description, techlist}, index) => {
           return (
             <WorkBox key={index}>
-              <Heading level={4}>
+              <Heading level={3}>
                 {title}
               </Heading>
               <Paragraph
                 size="small"
-                style={{borderBottom: "2px solid #000", paddingBottom: "20px"}}
+                style={{
+                  borderBottom: "2px solid #000",
+                  paddingBottom: "20px",
+                  fontWeight: "bold",
+                }}
               >
                 {description}
               </Paragraph>
