@@ -1,8 +1,10 @@
 import React from 'react';
-import { Button, Form } from 'grommet';
+import { Box, Button, Form } from 'grommet';
 import FormInput from '../Components/FormInput';
 import Header from '../Components/Heading';
 import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   
@@ -10,15 +12,32 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm('service_tzac04h', 'template_x9sb6fi', e.target, 'Zutsg4V2XwjAenEnJ')
-        .then((res) => {
-          console.log(res)
-        }).catch((err) => {
-            console.log(err)
+        .then(() => {
+          toast.success('Message sent successfully! 😀', {
+            position: "bottom-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });  
+        }).catch(() => {
+          toast.error('Something went wrong!', {
+            position: "bottom-center",
+            autoClose: 3000,  
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
         })
   }
   return (
     <>
       <Header title="Contact" colour="#ffffff26" top="40px" right="20%"/>
+      <Box>
         <Form
           messages={{ invalid: "invalid", required: "required" }}
           onSubmit={sendEmail}
@@ -48,6 +67,8 @@ const Contact = () => {
             }
           />
         </Form>
+        <ToastContainer />
+        </Box>
     </>
   )
 }
