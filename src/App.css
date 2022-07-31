@@ -58,12 +58,11 @@ label{
   font-weight: bold;
   margin-bottom: 0 !important;
 }
-.fKwwIt,
+input,
 textarea{
   color: #fcf6f4 !important;
-}
-.gsTXLM{
   border-bottom: 1px solid #fcf6f4 !important;
+  border-radius: 0px !important;
 }
 textarea{
   resize: none;
@@ -73,4 +72,8 @@ textarea{
 }
 #fp-nav ul li .fp-tooltip{
   color: #705b5b !important;
+}
+.Toastify__toast-container{
+  position: absolute !important;
+  width: 39vw !important;
 }
