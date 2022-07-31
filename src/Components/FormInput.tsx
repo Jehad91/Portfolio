@@ -9,7 +9,7 @@ const FormInput = (props: { name: string, type?: string }) => {
       label={props.name.slice(0,1).toUpperCase() + props.name.slice(1)}
       required={true}
     >
-      <TextInput id={props.name} name={props.name} type={props.type} />
+      {props.name !== 'message' && <TextInput id={props.name} name={props.name} type={props.type} />}
       {props.name === 'message' && <TextArea id={props.name} name={props.name} />}
     </FormField>
   )

@@ -1,19 +1,23 @@
 import React from 'react';
-import { Anchor } from 'grommet';
+import { Anchor, Heading } from 'grommet';
+import { DocumentDownload } from 'grommet-icons';
 
-const CV = () => {
+const CV = (props: { color?: string}) => {
   return (
     <Anchor
       href="https://docdro.id/HVkhZg2"
       target="_blank"
-      color="#000"
+      color={props.color}
       style={{
         position: "absolute",
         top: "30px",
-        right: "30px"
+        right: "30px",
+        textAlign: "center",
+        zIndex: "900"
       }}
     >
-      CV
+      <DocumentDownload color={props.color} size="large" />
+      <Heading level={5} color={props.color} style={{fontWeight: "800"}}>CV</Heading>
     </Anchor>
   )
 }

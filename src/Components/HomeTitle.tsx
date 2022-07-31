@@ -35,6 +35,7 @@ const HomeTitle = () => {
   return (
       <HomeBox>
         <SubBox
+          justify="center"
           gap="20px"
           color="#fcf6f4"
           style={{

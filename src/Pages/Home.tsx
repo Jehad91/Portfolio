@@ -1,9 +1,6 @@
 import React from 'react';
 import { Box, BoxExtendedProps } from 'grommet';
 import HomeTitle from '../Components/HomeTitle';
-import SocialLinks from '../Components/SocialLinks';
-import CV from '../Components/CV';
-import Logo from '../Components/Logo';
 
 const Container = (props: JSX.IntrinsicAttributes & BoxExtendedProps & { children?: React.ReactNode; }) => (
   <Box
@@ -19,9 +16,6 @@ const Home = () => {
   return (
     <Container>
       <HomeTitle />
-      <SocialLinks />
-      <CV />
-      <Logo />
     </Container>
   )
 }

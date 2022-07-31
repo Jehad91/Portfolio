@@ -21,7 +21,7 @@ const Header = (props: HeaderProps) => {
       left: props.left,
       right: props.right,
       bottom: props.bottom,
-      zIndex: '-1'
+      zIndex: '0'
     }}>
       {props.title.toUpperCase()}
     </Heading>

@@ -3,24 +3,16 @@
   margin: 0;
   padding: 0;
 }
-/* scrollbar Style */
-/* width */
 ::-webkit-scrollbar {
   width: 0;
   height: 6px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: #ccc;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #000;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #000;
 }
@@ -44,21 +36,41 @@ p{
   white-space: break-spaces;
 }
 .box-icon:hover{
-  background-color: #222;
+  background-color: #0000009c;
   transform: scale(1.05);
+  border: 2px solid #fcf6fc;
 }
 .box-icon:hover span,
 .box-icon:hover p,
 .box-icon:hover h3,
 .box-icon:hover svg{
-  color: white;
-  fill: white;
+  color: #fcf6f4;
+  fill: #fcf6f4;
 }
-.skill-section{
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+.section{
+  align-items: center;
 }
 .fp-watermark{
   display: none;
+}
+label{
+  color: #686868;
+  font-weight: bold;
+  margin-bottom: 0 !important;
+}
+.fKwwIt,
+textarea{
+  color: #fcf6f4 !important;
+}
+.gsTXLM{
+  border-bottom: 1px solid #fcf6f4 !important;
+}
+textarea{
+  resize: none;
+}
+.contact-section{
+  background-color: #000;
+}
+#fp-nav ul li .fp-tooltip{
+  color: #705b5b !important;
 }

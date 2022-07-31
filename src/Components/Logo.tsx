@@ -6,11 +6,11 @@ const Logo = () => {
   return (
     <Anchor
       href="/"
-      
       style={{
         position: "absolute",
         top: "30px",
-        left: "30px"
+        left: "30px",
+        zIndex: "900",
       }}
     >
       <Image
