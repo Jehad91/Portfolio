@@ -8,6 +8,9 @@ import particlesOptionsAmoung from "./Config/particles-amoung.json";
 import { ISourceOptions } from "tsparticles-engine";
 import ReactFullpage, { Item } from '@fullpage/react-fullpage';
 import Loading from './Components/Loading';
+import Logo from './Components/Logo';
+import CV from './Components/CV';
+import SocialLinks from './Components/SocialLinks';
 import './App.css';
 const Home = lazy(() => import('./Pages/Home'));
 const About = lazy(() => import('./Pages/About'));
@@ -22,6 +25,8 @@ const App = () => {
     await loadFull(engine);
   }, []);
 
+  const pages = [<Home/>, <About/>, <Skills/>, <Works/>, <Contact/>];
+
   return (
     <>
       <Particles options={
@@ -30,10 +35,16 @@ const App = () => {
         ((page === 'works') && particlesOptionsAmoung as ISourceOptions) ||
         particlesOptionsDark as ISourceOptions} init={particlesInit}
       />
+      <Logo />
+      <CV color={((page === 'home') || (page === 'skills')) ? "#000" : "#fcf6f4"} />
+      <SocialLinks  color={((page === 'skills')) ? "#000" : "#fcf6f4"}  />
       <ReactFullpage
         licenseKey = {'YOUR_KEY_HERE'}
         scrollingSpeed = {1000}
+        scrollOverflow= {false}
+        scrollBar= {false}
         anchors= {['home', 'about', 'skills', 'works', 'contact']}
+        sectionsColor={['transparent', 'transparent', 'transparent', 'transparent', '#000']}
         navigation = {true}
         navigationPosition = {'right'}
         navigationTooltips = {['Home', 'About', 'Skills', 'Works', 'Contact']}
@@ -48,31 +59,19 @@ const App = () => {
         render={() => {
           return (
             <ReactFullpage.Wrapper>
-              <div className="section">
-                <Suspense fallback={<Loading/>}>
-                  <Home />
-                </Suspense>
-              </div>
-              <div className="section">
-                <Suspense fallback={<Loading/>}>
-                  <About />
-                </Suspense>
-              </div>
-              <div className="section skill-section">
-                <Suspense fallback={<Loading/>}>
-                  <Skills />
-                </Suspense>
-              </div>
-              <div className="section" style={{overflow: "scroll"}}>
-                <Suspense fallback={<Loading/>}>
-                  <Works />
-                </Suspense>
-              </div>
-              <div className="section">
-                <Suspense fallback={<Loading/>}>
-                  <Contact />
-                </Suspense>
-              </div>
+              {pages.map((page, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="section"
+                    style={{overflow: (page === <Works/>) ? "scroll" : "auto"}}
+                  >
+                    <Suspense fallback={<Loading/>}>
+                      {page}
+                    </Suspense>
+                  </div>
+                )
+              })}
             </ReactFullpage.Wrapper>
           );
         }}

@@ -11,7 +11,7 @@ const BoxWorkStyle = (props: JSX.IntrinsicAttributes & BoxExtendedProps & { chil
     background='#fcf6f4'
     pad='10px 20px'
     style={{
-      marginRight: '40px',
+      margin: '0 60px',
       borderRadius: '0px 40px',
       boxShadow: 'rgb(0 0 0 / 70%) 2px 2px 5px 2px',
       transition: "all 0.5s ease-in-out",

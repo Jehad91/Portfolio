@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, BoxExtendedProps, Image } from 'grommet';
 import Header from '../Components/Heading';
-import SocialLinks from '../Components/SocialLinks';
 import spaceman from '../Assests/spaceman.png';
 import ParagraphStyle from '../Components/Paragraph';
 
@@ -34,7 +33,7 @@ const About = () => {
 
   return (
     <>
-      <Header title="About" colour="#d5d5d51c" top="43px" left="70px" />
+      <Header title="About" colour="#d5d5d51c" top="43px" left="150px" />
       <AboutBox>
         <ParagraphStyle>
           I'm a Full-Stack Web developer located in Palestine.
@@ -61,7 +60,6 @@ const About = () => {
               animation: "upDown 1s linear infinite alternate",
             }}
       />
-      <SocialLinks />
     </>
   )
 }

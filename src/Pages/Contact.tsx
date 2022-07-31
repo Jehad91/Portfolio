@@ -23,7 +23,7 @@ const Contact = () => {
           messages={{ invalid: "invalid", required: "required" }}
           onSubmit={sendEmail}
           style={{
-            width: "70vw",
+            width: "60vw",
             position: "absolute",
             top: "50%",
             left: "50%",
@@ -36,8 +36,16 @@ const Contact = () => {
           <Button
             type="submit"
             color="#fcf6f4"
-            label="Send"
+            label="SEND"
             fill={true}
+            margin={{top: "12px"}}
+            style={
+              {
+                backgroundColor:"#fcf6f4",
+                color: "#000",
+                fontWeight:"bold",
+              }
+            }
           />
         </Form>
     </>
