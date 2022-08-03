@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+img{
+  max-width: 100%;
+}
 ::-webkit-scrollbar {
   width: 0;
   height: 6px;
@@ -76,4 +79,25 @@ textarea{
 .Toastify__toast-container{
   position: absolute !important;
   width: 39vw !important;
+}
+@media(max-width: 888px){
+  .spaceman{
+    display: none;
+  }
+}
+
+@media(max-width: 700px){
+  .fjQwa-d{
+    height: 10px !important;
+  }
+  .kyyffq{
+    font-size: 18px !important;
+  }
+  .about-box{
+    left: 42px !important;
+    width: 80vw !important;
+  }
+  .skills{
+    font-size: 11px !important;
+  }
 }

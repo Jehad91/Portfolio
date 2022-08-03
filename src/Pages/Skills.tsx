@@ -30,10 +30,6 @@ const Skills = () => {
         style={
           {
             gap:"10px",
-            // position: "absolute",
-            // top: "50%",
-            // left: "50%",
-            // transform: "translate(-50%, -50%)",
           }
         }
       >
@@ -41,7 +37,7 @@ const Skills = () => {
           return (
             <IconBox key={index}>
                 <Image width="80px" src={technolg.src} />
-                <Text color="black">{technolg.name.toUpperCase()}</Text>
+                <Text className="skills" color="black">{technolg.name.toUpperCase()}</Text>
             </IconBox>
           )
         })}

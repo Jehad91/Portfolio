@@ -10,7 +10,7 @@ const theme = {
       brand: '#228BE6',
     },
     font: {
-      family: 'system-ui',
+      family: 'Open Sans',
       size: '20px',
     },
   },

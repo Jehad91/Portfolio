@@ -8,6 +8,7 @@ const About = () => {
 
   const AboutBox = (props: JSX.IntrinsicAttributes & BoxExtendedProps & { children?: React.ReactNode; }) => (
     <Box
+      className='about-box'
       width='50vw'
       pad='12px'
       border={
@@ -48,7 +49,9 @@ const About = () => {
           Collaborative team player with excellent technical abilities, offering 1 year of related experience.
         </ParagraphStyle>
       </AboutBox>
-      <Image src={spaceman}
+      <Image
+            className="spaceman"
+            src={spaceman}
             fill={false}
             alignSelf="center"
             fit="contain"
