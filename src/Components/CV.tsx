@@ -5,6 +5,7 @@ import { DocumentDownload } from 'grommet-icons';
 const CV = (props: { color?: string}) => {
   return (
     <Anchor
+      className="hidden"
       href="https://docdro.id/HVkhZg2"
       target="_blank"
       color={props.color}
