@@ -42,13 +42,13 @@ const HomeTitle = () => {
             borderRight: "none"
           }}
         >
-          <Heading level="1" margin="none" color="#fcf6f4">
+          <Heading level="1" color="#fcf6f4" responsive>
             Hi,
           </Heading>
-          <Heading level="2" margin="none" color="#fcf6f4">
+          <Heading level="2" color="#fcf6f4" responsive>
             I'm Jehad Abushaqra
           </Heading>
-          <Heading level="4" margin="none" color="#fcf6f499">
+          <Heading level="4" color="#fcf6f499" responsive>
             Full-Stack Web Developer
           </Heading>
         </SubBox>

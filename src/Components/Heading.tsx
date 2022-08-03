@@ -11,8 +11,9 @@ interface HeaderProps{
 }
 const Header = (props: HeaderProps) => {
   return (
-    <Heading style={{
-      fontSize: '100px',
+    <Heading
+      style={{
+      fontSize: '11vw',
       fontWeight: '900',
       margin: '0',
       color: props.colour,

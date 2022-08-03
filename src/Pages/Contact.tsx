@@ -13,10 +13,10 @@ const Contact = () => {
     emailjs
       .sendForm('service_tzac04h', 'template_x9sb6fi', e.target, 'Zutsg4V2XwjAenEnJ')
         .then(() => {
-          toast.success('Message sent successfully! 😀', {
+          toast.success('Message sent successfully!', {
             position: "bottom-center",
             autoClose: 3000,
-            hideProgressBar: false,
+            hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
@@ -26,7 +26,7 @@ const Contact = () => {
           toast.error('Something went wrong!', {
             position: "bottom-center",
             autoClose: 3000,  
-            hideProgressBar: false,
+            hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
