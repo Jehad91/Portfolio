@@ -5,6 +5,7 @@ import logo from '../Assests/logo.png';
 const Logo = () => {
   return (
     <Anchor
+      className="hidden"
       href="/"
       style={{
         position: "absolute",
