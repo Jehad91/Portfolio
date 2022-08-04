@@ -2,20 +2,46 @@ import React from 'react';
 import { Anchor, Box, Heading, Paragraph, Text } from 'grommet';
 import { Github } from 'grommet-icons';
 import Header from '../Components/Heading';
+import Slider from "react-slick";
 import WorkBox from '../Components/WorkBox';
 import worksData from '../Data/works.json';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Works = () => {
+  const settings = {
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      },
+    ]
+  };
+
   return (
     <>
       <Header title="Works" colour="#ffffff26" top="40px" right="20%"/>
       <Box
         margin="30px"
-        direction="row"
-        align="center"
-        justify="center"
-        style={{display: "-webkit-inline-box"}}
       >
+        <Slider {...settings}>
         {worksData.map(({title, github, deploy, description, techlist}, index) => {
           return (
             <WorkBox key={index}>
@@ -70,6 +96,7 @@ const Works = () => {
             </WorkBox>
           )
         })}
+        </Slider>
       </Box>
     </>
   )

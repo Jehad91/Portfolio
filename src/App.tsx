@@ -64,7 +64,6 @@ const App = () => {
                   <div
                     key={index}
                     className="section"
-                    style={{overflow: (page === <Works/>) ? "scroll" : "auto"}}
                   >
                     <Suspense fallback={<Loading/>}>
                       {page}
