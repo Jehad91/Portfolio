@@ -34,7 +34,7 @@ const About = () => {
 
   return (
     <>
-      <Header title="About" colour="#d5d5d51c" top="43px" left="150px" />
+      <Header title="About" colour="#d5d5d51c" top="35px" left="150px" />
       <AboutBox>
         <ParagraphStyle>
           I'm a Full-Stack Web developer located in Palestine.

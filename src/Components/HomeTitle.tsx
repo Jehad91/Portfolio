@@ -45,7 +45,7 @@ const HomeTitle = () => {
           <Heading level="1" color="#fcf6f4" responsive>
             Hi,
           </Heading>
-          <Heading level="2" color="#fcf6f4" responsive>
+          <Heading level="2" color="#fcf6f4" responsive className='my-name'>
             I'm Jehad Abushaqra
           </Heading>
           <Heading level="4" color="#fcf6f499" responsive>
