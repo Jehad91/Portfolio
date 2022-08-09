@@ -2,7 +2,7 @@ import React from 'react';
 import { Anchor, Heading } from 'grommet';
 import { DocumentDownload } from 'grommet-icons';
 
-const CV = (props: { color?: string}) => {
+const CV = (props: { color?: string, display?: string}) => {
   return (
     <Anchor
       className="hidden"
@@ -10,6 +10,7 @@ const CV = (props: { color?: string}) => {
       target="_blank"
       color={props.color}
       style={{
+        display: window.matchMedia("(max-width: 500px)").matches ? props.display : "block",
         position: "absolute",
         top: "30px",
         right: "30px",

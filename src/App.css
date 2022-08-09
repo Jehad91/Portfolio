@@ -87,6 +87,9 @@ textarea{
 }
 
 @media(max-width: 700px){
+  #fp-nav.fp-right{
+    display: none !important;
+  }
   .fjQwa-d{
     height: 10px !important;
   }

@@ -35,9 +35,18 @@ const App = () => {
         ((page === 'works') && particlesOptionsAmoung as ISourceOptions) ||
         particlesOptionsDark as ISourceOptions} init={particlesInit}
       />
-      <Logo />
-      <CV color={((page === 'home') || (page === 'skills')) ? "#000" : "#fcf6f4"} />
-      <SocialLinks  color={((page === 'skills')) ? "#000" : "#fcf6f4"}  />
+      <Logo display={((page === 'about') || (page === 'skills')) ? "none" : "block"}/>
+      <CV
+        color={((page === 'home') || (page === 'skills')) ? "#000" : "#fcf6f4"}
+        display={((page === 'about') || (page === 'skills')) ? "none" : "block"}
+      />
+      <SocialLinks
+        color={((page === 'skills')) ? "#000" : "#fcf6f4"}
+        display={((page === 'about') ||
+                  (page === 'skills') ||
+                  (page === 'works')) ? "none" : "flex"
+                }
+      />
       <ReactFullpage
         licenseKey = {'YOUR_KEY_HERE'}
         scrollingSpeed = {1000}

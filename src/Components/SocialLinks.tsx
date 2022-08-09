@@ -3,7 +3,7 @@ import { Anchor, Box, BoxExtendedProps } from 'grommet';
 import { Github, Linkedin} from 'grommet-icons';
 import { ImWhatsapp } from 'react-icons/im';
 
-const SocialBox = (props: JSX.IntrinsicAttributes & BoxExtendedProps & { children?: React.ReactNode; }) => (
+const SocialBox = (props: JSX.IntrinsicAttributes & BoxExtendedProps & { children?: React.ReactNode, display?: string; }) => (
   <Box
     as ='div'
     direction='column'
@@ -12,6 +12,7 @@ const SocialBox = (props: JSX.IntrinsicAttributes & BoxExtendedProps & { childre
     gap='6px'
     width='fit-content'
     style={{
+      display: window.matchMedia("(max-width: 500px)").matches ? props.display : "flex",
       position: 'absolute',
       bottom: '0px',
       left: '30px',
@@ -21,9 +22,9 @@ const SocialBox = (props: JSX.IntrinsicAttributes & BoxExtendedProps & { childre
   />
 );
 
-const SocialLinks = (props: { color?: string}) => {
+const SocialLinks = (props: { color?: string, display?: string }) => {
   return (
-    <SocialBox>
+    <SocialBox display={props.display}>
       <Anchor
         href="https://wa.me/+970599734455"
         target="_blank"
